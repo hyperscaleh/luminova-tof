@@ -21,7 +21,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
+html{scroll-behavior:smooth;overscroll-behavior-y:none;}
 body{
   margin:0;
   background:var(--bg);
@@ -135,3 +135,11 @@ section{padding:64px 0;}
   .container{padding:0 14px;}
   .btn-lg{padding:15px 26px;font-size:1rem;}
 }
+
+/* Touch devices: a :hover transform shifts the element the instant a finger
+   lands on it, which iOS/Android can read as a drag and cancel the tap.
+   Disable hover transforms wherever there's no real pointer to hover with. */
+@media (hover:none), (pointer:coarse){
+  .btn-primary:hover{transform:none!important;}
+}
+button,a.btn{touch-action:manipulation;}
