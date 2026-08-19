@@ -128,4 +128,10 @@ section{padding:64px 0;}
 @media (max-width:560px){
   .hero{padding:120px 0 40px;}
   section{padding:48px 0;}
+  .container{padding:0 18px;}
+  .mechanism{padding:26px 18px;}
+}
+@media (max-width:380px){
+  .container{padding:0 14px;}
+  .btn-lg{padding:15px 26px;font-size:1rem;}
 }
